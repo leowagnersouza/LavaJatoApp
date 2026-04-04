@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LavaJatoApp.MAUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4cd4b2608a98bf4ee1a20ca8766c738adaf0b08e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3e5407f2df446168e2a8030a1f344474a403876f")]
 [assembly: System.Reflection.AssemblyProductAttribute("LavaJatoApp.MAUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LavaJatoApp.MAUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

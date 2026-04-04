@@ -1,0 +1,45 @@
+<?xml
+    version="1.0"
+    encoding="utf-8"?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="LavaJatoApp.MAUI.SplashIntroPage"
+    BackgroundColor="{StaticResource BackgroundWhiteColor}">
+    <Grid
+        RowDefinitions="*, *, *">
+        <Image
+            Source="logo.png"
+            WidthRequest="415"
+            HeightRequest="99"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Aspect="AspectFit"
+            Margin="0,50,0,0"
+            Grid.Row="0" />
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            VerticalOptions="Center">
+            <Button
+                Text="Vamos lá!"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="0,0,0,15"
+                WidthRequest="180"
+                SemanticProperties.Hint="Entrar no aplicativo" />
+            <Label
+                Text="Ajuda &amp; Suporte"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+
+        <Label
+            Text="Versão 1.0"
+            TextColor="{StaticResource UrbanGrayColor}"
+            FontSize="11"
+            Grid.Row="2"
+            VerticalOptions="End"
+            HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>
