@@ -1,20 +1,20 @@
 using CommunityToolkit.Mvvm.Input;
+using LavaJatoApp.Application.Interfaces.Services;
 using LavaJatoApp.MAUI.Navigation;
 
 namespace LavaJatoApp.MAUI.ViewModels;
 
 public partial class SplashIntroViewModel
+    : BaseViewModel
 {
-    private readonly INavigationService _navigationService;
-
     public SplashIntroViewModel(INavigationService navigationService)
+        : base(navigationService)
     {
-        _navigationService = navigationService;
     }
 
     [RelayCommand]
     private Task Prosseguir()
     {
-        return _navigationService.GoToRootAsync(AppRoutes.Login);
+        return NavigationService.GoToRootAsync(AppRoutes.Login);
     }
 }

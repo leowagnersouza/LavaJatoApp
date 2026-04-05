@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LavaJatoApp.MAUI.MainPage">
+﻿<?xml
+    version="1.0"
+    encoding="utf-8"?>
+
+<pages:BasePage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:LavaJatoApp.MAUI.Pages"
+    xmlns:viewmodels="clr-namespace:LavaJatoApp.MAUI.ViewModels"
+    x:TypeArguments="viewmodels:MainViewModel"
+    x:Class="LavaJatoApp.MAUI.Pages.MainPage"
+    x:DataType="viewmodels:MainViewModel">
 
     <ScrollView>
         <VerticalStackLayout
@@ -26,11 +34,11 @@
 
             <Button
                 x:Name="CounterBtn"
-                Text="Click me" 
+                Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 
-</ContentPage>
+</pages:BasePage>

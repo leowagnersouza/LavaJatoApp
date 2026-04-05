@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using LavaJatoApp.Application.Interfaces.Services;
+using LavaJatoApp.MAUI.DependencyInjection;
 using LavaJatoApp.MAUI.Navigation;
-using LavaJatoApp.MAUI.ViewModels;
 
 namespace LavaJatoApp.MAUI;
 
@@ -27,12 +28,7 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<AppShell>();
         builder.Services.AddSingleton<INavigationService, ShellNavigationService>();
-        // VMs
-        builder.Services.AddTransient<SplashIntroViewModel>();
-        builder.Services.AddTransient<LoginViewModel>();
-        // Pages
-        builder.Services.AddTransient<Pages.SplashIntroPage>();
-        builder.Services.AddTransient<Pages.LoginPage>();
+        builder.Services.AddPresentation();
 
         return builder.Build();
     }

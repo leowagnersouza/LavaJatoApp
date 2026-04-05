@@ -1,23 +1,26 @@
-﻿namespace LavaJatoApp.MAUI;
+﻿using LavaJatoApp.MAUI.ViewModels;
 
-public partial class MainPage : ContentPage
+namespace LavaJatoApp.MAUI.Pages;
+
+public partial class MainPage
 {
-	int count = 0;
+    private int count = 0;
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public MainPage(MainViewModel vm)
+        : base(vm)
+    {
+        InitializeComponent();
+    }
 
-	private void OnCounterClicked(object? sender, EventArgs e)
-	{
-		count++;
+    private void OnCounterClicked(object? sender, EventArgs e)
+    {
+        count++;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+        if (count == 1)
+            CounterBtn.Text = $"Clicked {count} time";
+        else
+            CounterBtn.Text = $"Clicked {count} times";
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        SemanticScreenReader.Announce(CounterBtn.Text);
+    }
 }

@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="LavaJatoApp.MAUI/LavaJatoApp.MAUI.csproj" />
+    <Project Path="LavaJatoApp.MAUI/LavaJatoApp.MAUI.csproj"/>
+    <Project Path="LavaJatoApp.Application/LavaJatoApp.Application.csproj"/>
 </Solution>

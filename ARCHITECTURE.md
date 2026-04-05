@@ -119,13 +119,13 @@ A seta indica "depende de". `Domain` e `Shared` não apontam para ninguém.
 > Atualmente todos os arquivos residem em `LavaJatoApp.MAUI`.
 > A separação em projetos será feita de forma incremental conforme o domínio de negócio amadurecer.
 
-| Camada                       | Status        |
-| ---------------------------- | ------------- |
+| Camada                       | Status          |
+| ---------------------------- | --------------- |
 | `LavaJatoApp.MAUI`           | ✅ Em progresso |
-| `LavaJatoApp.Application`    | 🔲 Planejado  |
-| `LavaJatoApp.Domain`         | 🔲 Planejado  |
-| `LavaJatoApp.Infrastructure` | 🔲 Planejado  |
-| `LavaJatoApp.Shared`         | 🔲 Planejado  |
+| `LavaJatoApp.Application`    | ✅ Em progresso |
+| `LavaJatoApp.Domain`         | 🔲 Planejado    |
+| `LavaJatoApp.Infrastructure` | 🔲 Planejado    |
+| `LavaJatoApp.Shared`         | 🔲 Planejado    |
 
 ---
 

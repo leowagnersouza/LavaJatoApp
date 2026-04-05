@@ -2,14 +2,18 @@
     version="1.0"
     encoding="utf-8"?>
 
-<ContentPage
+<pages:BasePage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:LavaJatoApp.MAUI.Pages"
+    xmlns:viewmodels="clr-namespace:LavaJatoApp.MAUI.ViewModels"
+    x:TypeArguments="viewmodels:LoginViewModel"
     x:Class="LavaJatoApp.MAUI.Pages.LoginPage"
+    x:DataType="viewmodels:LoginViewModel"
     Shell.NavBarIsVisible="False"
     Shell.TabBarIsVisible="False"
     Title="Login">
 
     <Grid />
 
-</ContentPage>
+</pages:BasePage>

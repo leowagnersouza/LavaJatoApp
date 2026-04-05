@@ -52,6 +52,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\LavaJatoApp.Application\LavaJatoApp.Application.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="CommunityToolkit.Maui" Version="14.0.1"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2"/>
         <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.51"/>
