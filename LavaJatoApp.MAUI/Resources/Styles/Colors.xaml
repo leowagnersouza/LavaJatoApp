@@ -12,6 +12,8 @@
     <Color x:Key="PrimaryColor">#0a84ff</Color>
     <Color x:Key="SteelGrayColor">#555555</Color>
     <Color x:Key="UrbanGrayColor">#777777</Color>
+    <Color x:Key="PretoObsidiana">#111111</Color>
+    <Color x:Key="CinzaNeblina">#d6d6d6</Color>
 
     <SolidColorBrush x:Key="BackgroundWhiteColorBrush" Color="{StaticResource BackgroundWhiteColor}" />
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />

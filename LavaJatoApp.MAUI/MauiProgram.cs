@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
 using LavaJatoApp.Application.Interfaces.Services;
+using LavaJatoApp.MAUI.Controls;
 using LavaJatoApp.MAUI.DependencyInjection;
 using LavaJatoApp.MAUI.Navigation;
+using Microsoft.Maui.Handlers;
 
 namespace LavaJatoApp.MAUI;
 
@@ -29,6 +31,12 @@ public static class MauiProgram
         builder.Services.AddSingleton<AppShell>();
         builder.Services.AddSingleton<INavigationService, ShellNavigationService>();
         builder.Services.AddPresentation();
+
+        builder.ConfigureMauiHandlers(handlers =>
+        {
+            handlers.AddHandler<BorderedEntry, EntryHandler>();
+        });
+
 
         return builder.Build();
     }
