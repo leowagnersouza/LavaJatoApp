@@ -4,4 +4,6 @@ public static class AppRoutes
 {
     public const string SplashIntro = "splash-intro";
     public const string Login = "login";
+    public const string Home = "home";
+    public const string Dashboard = "dashboard";
 }

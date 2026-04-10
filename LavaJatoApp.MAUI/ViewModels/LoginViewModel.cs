@@ -1,11 +1,14 @@
+using CommunityToolkit.Mvvm.Input;
 using LavaJatoApp.Application.Interfaces.Services;
+using LavaJatoApp.MAUI.Navigation;
 
 namespace LavaJatoApp.MAUI.ViewModels;
 
-public class LoginViewModel : BaseViewModel
+public partial class LoginViewModel(INavigationService navigationService) : BaseViewModel(navigationService)
 {
-    public LoginViewModel(INavigationService navigationService)
-        : base(navigationService)
+    [RelayCommand]
+    private Task Login()
     {
+        return NavigationService.GoToRootAsync(AppRoutes.Home);
     }
 }
