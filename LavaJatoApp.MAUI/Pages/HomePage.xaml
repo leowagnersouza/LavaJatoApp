@@ -8,31 +8,103 @@
     xmlns:controls="clr-namespace:LavaJatoApp.MAUI.Controls"
     xmlns:pages="clr-namespace:LavaJatoApp.MAUI.Pages"
     xmlns:viewmodels="clr-namespace:LavaJatoApp.MAUI.ViewModels"
+    xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
     x:Class="LavaJatoApp.MAUI.Pages.HomePage"
     x:TypeArguments="viewmodels:HomeViewModel"
     x:DataType="viewmodels:HomeViewModel">
     <Grid
-        RowDefinitions="Auto,*">
-        <controls:FakeTitleBar Grid.Row="0" />
+        RowDefinitions="Auto,Auto,Auto,*">
+        <controls:FakeTitleBar
+            Grid.Row="0" />
 
-        <Grid
+        <controls:BorderedEntry
             Grid.Row="1"
-            Padding="10">
-            <VerticalStackLayout
-                Spacing="8"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
-                <Label
-                    Text="Home"
-                    FontSize="28"
-                    FontAttributes="Bold"
-                    HorizontalOptions="Center" />
+            Placeholder="Digite a placa do veículo"
+            HorizontalTextAlignment="Center"
+            Margin="15,24,15,0"
+            TextTransform="Uppercase"
+            IsTextPredictionEnabled="False"
+            MaxLength="7" />
 
-                <Label
-                    Text="Conteudo inicial da pagina Home"
-                    FontSize="16"
-                    HorizontalOptions="Center" />
-            </VerticalStackLayout>
-        </Grid>
+        <Button
+            Grid.Row="2"
+            Text="Continuar"
+            Margin="15,10,15,10"
+            Clicked="Button_OnClicked"/>
+
+        <BoxView
+            Grid.Row="3"
+            HeightRequest="1"
+            BackgroundColor="#DDDDDD"
+            HorizontalOptions="Fill"
+            Margin="0,8,0,0" />
+
+        <kanban:SfKanban
+            x:Name="KanbanBoard"
+            MaximumColumnWidth="200"
+            Margin="10,16,10,0"
+            Grid.Row="4">
+            <kanban:SfKanban.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout
+                        WidthRequest="200"
+                        HeightRequest="48"
+                        Padding="10,8"
+                        Background="{Binding Background}">
+                        <Label
+                            Text="{Binding Title}"
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            TextColor="#333333"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                        <Label
+                            Text="{Binding ItemsCount}"
+                            FontSize="12"
+                            TextColor="#333333"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+                </DataTemplate>
+            </kanban:SfKanban.HeaderTemplate>
+
+            <!-- Template de cada card -->
+            <kanban:SfKanban.CardTemplate>
+                <DataTemplate
+                    x:DataType="kanban:KanbanModel">
+                    <Border
+                        BackgroundColor="White"
+                        Stroke="#DDDDDD"
+                        StrokeShape="RoundRectangle 10"
+                        Margin="4,2"
+                        Padding="14,10">
+                        <Border.Shadow>
+                            <Shadow
+                                Brush="#AAAAAA"
+                                Offset="1,2"
+                                Radius="6"
+                                Opacity="0.25" />
+                        </Border.Shadow>
+                        <VerticalStackLayout
+                            Spacing="4">
+                            <Label
+                                Text="{Binding Title}"
+                                FontAttributes="Bold"
+                                FontSize="15"
+                                TextColor="#1A1A1A"
+                                CharacterSpacing="1" />
+                            <Label
+                                Text="{Binding Description}"
+                                FontSize="12"
+                                TextColor="#FF8C42" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </kanban:SfKanban.CardTemplate>
+
+        </kanban:SfKanban>
+
+
     </Grid>
+
 </pages:BasePage>

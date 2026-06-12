@@ -38,6 +38,9 @@
         <!-- App Icon -->
         <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4"/>
 
+        <!-- App settings -->
+        <MauiAsset Include="appsettings.json" LogicalName="appsettings.json"/>
+
         <!-- Splash Screen -->
 
         <!-- Images -->
@@ -58,8 +61,10 @@
     <ItemGroup>
         <PackageReference Include="CommunityToolkit.Maui" Version="14.0.1"/>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0"/>
         <PackageReference Include="Microsoft.Maui.Controls" Version="10.0.51"/>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0"/>
+        <PackageReference Include="Syncfusion.Maui.Kanban" Version="33.1.49"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -90,6 +95,12 @@
         <Compile Update="Platforms\iOS\BorderedEntryHandler.iOS.cs">
             <ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
         </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Syncfusion.Maui.Kanban">
+            <HintPath>..\..\..\.nuget\packages\syncfusion.maui.kanban\33.1.49\lib\net10.0-android36.0\Syncfusion.Maui.Kanban.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ Lista de melhorias e tarefas pendentes.
 
 ## 🔴 Alta prioridade
 
-
+- [ ] Mover a chave de licença da Syncfusion do `appsettings.json` para Azure Key Vault
 
 ---
 
